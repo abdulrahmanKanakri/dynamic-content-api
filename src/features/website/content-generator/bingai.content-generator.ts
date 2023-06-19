@@ -117,8 +117,7 @@ export class BingAIContentGenerator implements IContentGenerator {
     console.log('start generateKeypoins');
 
     try {
-      const message =
-        'list 5 key points with title about website that is ' + dto.description;
+      const message = 'list 5 key points with title for ' + dto.description;
 
       const res = await api.sendMessage(message);
 
@@ -183,7 +182,7 @@ export class BingAIContentGenerator implements IContentGenerator {
     api: any,
     dto: GenerateContentDto,
   ): Promise<string[]> {
-    const message = 'write 7 FAQ for ' + dto.description;
+    const message = 'write 5 FAQ for ' + dto.description;
 
     const res = await api.sendMessage(message);
 
